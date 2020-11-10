@@ -16,11 +16,13 @@
     // your code here
 
     const cdate = new Date();
+    const userLang = navigator.language || navigator.userLanguage; 
 
 const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour:  "2-digit", minute: "2-digit" };
 
 /*alert(cdate.toLocaleDateString('en-DK', options)); */
-document.getElementById("target").innerHTML = cdate.toLocaleDateString('en-BE', options);
+//document.getElementById("target").innerHTML = cdate.toLocaleDateString('en-BE', options);
+document.getElementById("target").innerHTML = cdate.toLocaleDateString(userLang, options);
 
 
 

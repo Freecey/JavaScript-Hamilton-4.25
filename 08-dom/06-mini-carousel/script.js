@@ -28,7 +28,7 @@
 
     document.getElementById("next").addEventListener("click" , function(){
   //      console.log(gallery[x])
-        document.getElementsByTagName("img")[0].src  = gallery[x];
+        document.querySelector("img").src  = gallery[x];
         x = x+1;
         if (x == gallery.length)
         { x = 0 }

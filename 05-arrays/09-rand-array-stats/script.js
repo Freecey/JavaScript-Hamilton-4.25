@@ -30,8 +30,8 @@
 
         order = tennum.sort();
 
-        let smallest = order[0]
-        let biggest = order[9]
+        let smallest = Math.max(...tennum)
+        let biggest  = Math.max(...tennum)
         let sum = tennum.reduce((a, b) => {
             return a + b;
         });
@@ -43,8 +43,8 @@
         console.log(sum)
         console.log(average) */
 
-        document.getElementById("min").innerHTML = order[0];
-        document.getElementById("max").innerHTML = order[9];
+        document.getElementById("min").innerHTML = smallest;
+        document.getElementById("max").innerHTML = biggest;
         document.getElementById("sum").innerHTML = sum;
         document.getElementById("average").innerHTML = average;
 

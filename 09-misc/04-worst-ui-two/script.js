@@ -19,7 +19,7 @@
     let target = document.getElementById("target");
       
 
-
+    let new_value
     
 
     function coolone(partX) {
@@ -29,17 +29,24 @@
         act_value = parseInt(partX.innerText)
         min = parseInt(partX.getAttribute("data-min"))
         max = parseInt(partX.getAttribute("data-max")) 
-        new_value = parseInt(partX.innerText)
-        new_value = new_value+1
+
+        if ( new_value == max) 
+            { new_value = min  }
+        else {
+            new_value = parseInt(partX.innerText)
+            new_value = new_value+1 
+        }
+
         if ( new_value <= max) {
             if ( new_value.toString().length == 1 )
                 { new_value = "0"+new_value}
+            
             partX.innerText = new_value;
             target.innerText = "+32-"+part1.innerText+"-"+part2.innerText+"."+part3.innerText+"."+part4.innerText;
             new_value = parseInt(new_value)
             console.log("val actuel = "+new_value)
         }
-        else { new_value = min }
+
     })
     }
 

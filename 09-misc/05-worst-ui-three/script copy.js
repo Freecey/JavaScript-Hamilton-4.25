@@ -23,11 +23,7 @@
     let fpart2 = document.getElementById("fix-part-two");
     let fpart3 = document.getElementById("fix-part-three");
     let fpart4 = document.getElementById("fix-part-four");
-
-    let cvalue1 = "000"
-    let cvalue2 = "00"
-    let cvalue3 = "00"
-    let cvalue4 = "00"
+    
 
     let partX
     
@@ -37,9 +33,8 @@
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
-   function randx(fpartX, partX) {
-            setInterval(function(){ 
-//           
+    function randx(fpartX, partX) {
+        fpartX.addEventListener("click", function() {
             min = parseInt(partX.getAttribute("data-min"))
             max = parseInt(partX.getAttribute("data-max")) 
             //console.log(max)
@@ -53,33 +48,10 @@
             else {
                 partX.value = randnum; 
             }
-
-            fpart1.addEventListener("click", function() {
-            clearInterval()
-            cvalue1 = part1.value
-            target.innerHTML = "+32-"+cvalue1+"-"+cvalue2+"."+cvalue3+"."+cvalue4;
-            })
-
-            fpart2.addEventListener("click", function() {
-            clearInterval()
-            cvalue2 = part2.value
-            target.innerHTML = "+32-"+cvalue1+"-"+cvalue2+"."+cvalue3+"."+cvalue4;
-            })
-
-            fpart3.addEventListener("click", function() {
-            clearInterval()
-            cvalue3 = part3.value
-            target.innerHTML = "+32-"+cvalue1+"-"+cvalue2+"."+cvalue3+"."+cvalue4;
-            })
-        
-            fpart4.addEventListener("click", function() {
-            clearInterval()
-            cvalue4 = part4.value
-            target.innerHTML = "+32-"+cvalue1+"-"+cvalue2+"."+cvalue3+"."+cvalue4;
-            })
+            target.innerHTML = "+32-"+part1.value+"-"+part2.value+"."+part3.value+"."+part4.value;
 
 
-      } ,100)
+        })
     }
 
 

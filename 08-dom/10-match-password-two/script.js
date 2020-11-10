@@ -21,6 +21,8 @@
 
         if (pass1 === pass2) {
             console.log('passwords entered in the input fields are exactly the same');
+            document.getElementById("pass-one").classList.remove("error");
+            document.getElementById("pass-two").classList.remove("error");
             }
         else {
             console.log('passwords entered in the input are NOT the same');

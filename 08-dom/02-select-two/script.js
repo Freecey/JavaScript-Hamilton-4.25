@@ -12,5 +12,6 @@
 (function() {
 
     // your code here
-    document.getElementsByTagName("P")[1].innerHTML = "owned";
+    document.querySelector("#target").innerHTML = "owned ...";
+    //document.getElementsByTagName("P")[1].innerHTML = "owned";
 })();

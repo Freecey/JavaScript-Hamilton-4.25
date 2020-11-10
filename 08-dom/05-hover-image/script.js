@@ -13,15 +13,17 @@
 
     // your code here
 
-    var x = document.getElementsByTagName("IMG")[0].getAttribute("src"); 
-    var y = document.getElementsByTagName("IMG")[0].getAttribute("data-hover"); 
+    const img = document.querySelector("img")
+
+    var x = img.getAttribute("src"); 
+    var y = img.getAttribute("data-hover"); 
     //console.log(x);
 
-    document.getElementsByTagName("img")[0].addEventListener("mouseover", () => {
-        document.getElementsByTagName("img")[0].src = y;
+    img.addEventListener("mouseover", () => {
+        img.src = y;
     });
-    document.getElementsByTagName("img")[0].addEventListener("mouseout", () => {
-        document.getElementsByTagName("img")[0].src = x;
+    img.addEventListener("mouseout", () => {
+        img.src = x;
     });
 
     //console.log(img2);

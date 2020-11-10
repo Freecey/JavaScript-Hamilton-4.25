@@ -13,14 +13,12 @@
 
     // your code here
 
-
-
-
-
     let body = document.getElementById("target");
     let tbl = document.createElement("table");
     let tblBody = document.createElement("tbody");
 
+    tbl.appendChild(tblBody);
+    body.appendChild(tbl);
 
     for (let j = 0; j < 10; j++) {
         let row = document.createElement("tr");
@@ -31,10 +29,5 @@
         }
         tblBody.appendChild(row);
     }
-    tbl.appendChild(tblBody);
-    body.appendChild(tbl);
-
-
-
 
 })();

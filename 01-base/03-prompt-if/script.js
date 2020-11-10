@@ -30,9 +30,9 @@ if (a > 0) {
 })();
 
 
-var answ = prompt("Do You Want a Cake ?");
+var answ = confirm("Do You Want a Cake ?");
 
-if (answ == "yes") {
+if (answ == true) {
 alert("congratulate, but ... The cake is a lie..." );
 } else {
   alert("More cake for me then :p !");

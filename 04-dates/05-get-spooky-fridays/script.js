@@ -21,10 +21,10 @@
         let sel_year = document.getElementById("year").value;
 
 
-        function numberOfFridaythe13thsIn(jahr) {
+        function numberOfFridaythe13thsIn(syear) {
             var count = 0;
             for (var month=0; month<12; month++) {
-                var d = new Date(jahr,month,13);
+                var d = new Date(syear,month,13);
                 if(d.getDay() == 5){
                     console.log(d)
                   count++;
