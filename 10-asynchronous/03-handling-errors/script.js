@@ -11,4 +11,11 @@
 
 (() => {
     // your code here
+    function callback(error, persons) {
+        error === null ? console.log(persons) : console.error(error);
+      }
+      document.querySelector("#run").addEventListener("click", function () {
+        window.lib.getPersons(callback);
+      });
+
 })();

@@ -11,4 +11,34 @@
 
 (() => {
     // your code here
+/*
+    const promiseGetPosts = new Promise(function(resolve, reject) {
+        if (POSTS !== 'undefined') {
+            resolve(POSTS);
+        } else {
+            reject(error);
+        }
+    });
+
+    promiseGetPosts
+*/
+
+
+
+
+
+document.querySelector("#run").addEventListener("click", function () {
+    window.lib.getPosts()
+    .then((resolve) => {
+        console.table(resolve);
+    })
+    .catch((reject) => {
+        console.error(reject);
+    }
+    )
+    
+    
+  });
+    
+
 })();

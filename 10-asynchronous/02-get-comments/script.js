@@ -11,4 +11,38 @@
 
 (() => {
     // your code here
+      document.getElementById("run").addEventListener("click", function () {
+        window.lib.getPosts((error, articles) => {
+            if (error) {
+                console.error("Error! - Articles");
+            }
+            else {
+                console.log(articles);
+                articles.forEach(article => {
+                    window.lib.getComments(article.id, (error, comments) => {
+                        if (error) {
+                                console.error("Error! - Comments");
+                            }
+                        else {
+
+                             article.comments = comments;
+                            }
+                        }
+                    
+                    
+                    )
+                    
+                });
+
+
+                
+
+                
+                    
+                
+            }
+
+          
+        });
+      });
 })();

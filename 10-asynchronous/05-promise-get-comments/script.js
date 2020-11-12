@@ -11,4 +11,42 @@
 
 (() => {
     // your code here
+
+
+
+
+    document.querySelector("#run").addEventListener("click", function () {
+        window.lib.getPosts()
+        .then((resolve) => {
+            //console.table(resolve);
+            return(resolve)
+        })
+        .then((resolve) => {
+            for (let article of resolve) {
+                window.lib.getComments(article.id)
+                .then(comment => {
+                    article.comments = comment;
+                    console.table(article)
+                })
+
+                
+                
+                //console.log(article)
+            }
+        })
+
+
+        .catch((reject) => {
+            console.error(reject);
+        }
+        )
+        
+        
+      });
+
+
+
+
+
+
 })();
