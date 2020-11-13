@@ -34,8 +34,7 @@ document.querySelector("#run").addEventListener("click", function () {
     })
     .catch((reject) => {
         console.error(reject);
-    }
-    )
+    });
     
     
   });

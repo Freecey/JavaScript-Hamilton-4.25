@@ -11,4 +11,24 @@
 
 (() => {
     // your code here
+    document.querySelector("#run").addEventListener("click", async () => {
+        try {
+          const result = await window.lib.getPosts();
+    
+          result.forEach((article) => {
+            window.lib
+              .getComments(article.id)
+    
+              .then((comment) => {
+                article.comment = comment;
+              });
+          });
+          console.log(result);
+        } catch (error) {
+          console.log(error);
+        }
+      });
+
+// TO FINISH
+
 })();
