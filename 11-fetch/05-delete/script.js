@@ -11,4 +11,33 @@
 
 (() => {
     // your code here
+
+    
+
+    document.querySelector("#run").addEventListener("click", () => {
+        
+
+        let heroid = Number(document.getElementById("hero-id").value)
+
+        fetch("http://localhost:3000/heroes")
+          .then(function (dataHeroes) {
+            
+            return dataHeroes.json();
+            
+          })
+          .then(function (dataHeroes) {
+
+            const selecthero = dataHeroes.find( hero => hero.id === heroid);
+            console.log(selecthero)
+
+
+            removedataHeroes = dataHeroes.splice(selecthero.id-1 , 1);
+            
+            console.log(dataHeroes)
+
+
+
+
+          });
+      });
 })();
